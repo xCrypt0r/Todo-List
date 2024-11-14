@@ -1,0 +1,14 @@
+.container {
+    text-align: center;
+}
+
+.todo-input {
+    display: inline-block;
+    width: 95%;
+    margin-right: 0.2rem;
+    padding: 0.5rem;
+
+    &:focus {
+        outline: none;
+    }
+}

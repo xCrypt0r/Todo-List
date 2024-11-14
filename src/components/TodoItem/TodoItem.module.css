@@ -1,0 +1,72 @@
+:root {
+    --color-danger: #dc3544;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.2rem;
+    font-size: 1.2rem;
+
+    & > input[type="checkbox"] {
+        margin-right: 0.5rem;
+        outline: none;
+        accent-color: var(--color-danger);
+        cursor: pointer;
+        transform: scale(1.5);
+    }
+}
+
+.todo-item,
+.todo-item-done,
+.todo-item-editing {
+    flex: 1;
+}
+
+.todo-item-done {
+    position: relative;
+    color: var(--color-danger);
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 15%;
+        background-color: var(--color-danger);
+        animation: strike-through 0.3s cubic-bezier(0.47, 0.93, 0.59, 0.95) forwards;
+    }
+}
+
+.todo-item-editing {
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.icons {
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+
+    & .icon {
+        cursor: pointer;
+    }
+}
+
+@keyframes strike-through {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

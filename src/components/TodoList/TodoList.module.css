@@ -1,0 +1,13 @@
+.container {
+    margin-top: 1rem;
+    text-align: left;
+
+    & > p {
+        margin-bottom: 0.5rem;
+    }
+
+    & > ul {
+        overflow-y: auto;
+        height: 80vh;
+    }
+}

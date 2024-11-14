@@ -1,0 +1,12 @@
+.container {
+    padding: 1.5rem 1rem 0;
+    text-align: center;
+    user-select: none;
+
+    & > h2 {
+        margin-bottom: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
